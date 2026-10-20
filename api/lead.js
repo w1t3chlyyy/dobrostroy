@@ -13,6 +13,8 @@ module.exports = async (req, res) => {
   const name = String(b.name || '').trim().slice(0, 60);
   const phone = String(b.phone || '').trim().slice(0, 25);
   const module_ = String(b.module || '').trim().slice(0, 60);
+  const area = String(b.area || '').trim().slice(0, 50);
+  const comment = String(b.comment || '').trim().slice(0, 500);
   const page = String(b.page || '').slice(0, 200);
 
   if (name.length < 2 || phone.replace(/\D/g, '').length !== 11) {
@@ -20,11 +22,26 @@ module.exports = async (req, res) => {
   }
   const token = process.env.TG_BOT_TOKEN;
   const chat = process.env.TG_CHAT_ID;
-  if (!token || !chat) return res.status(500).json({ ok: false, error: 'not_configured' });
+  if (!token || !chat) {
+    console.log('[Lead received (mock mode - TG_BOT_TOKEN / TG_CHAT_ID not configured)]:', {
+      name,
+      phone,
+      module: module_,
+      area,
+      comment,
+      page,
+      date: new Date().toISOString()
+    });
+    return res.status(200).json({ ok: true, mock: true });
+  }
 
   const text =
     `🏠 <b>Новая заявка</b>\n` +
-    `Имя: ${esc(name)}\nТелефон: ${esc(phone)}\nМодуль: ${esc(module_)}\n` +
+    `Имя: ${esc(name)}\n` +
+    `Телефон: ${esc(phone)}\n` +
+    `Проект / модуль: ${esc(module_)}\n` +
+    (area ? `Площадь: ${esc(area)}\n` : '') +
+    (comment ? `Комментарий: ${esc(comment)}\n` : '') +
     (page ? `Страница: ${esc(page)}` : '');
 
   try {

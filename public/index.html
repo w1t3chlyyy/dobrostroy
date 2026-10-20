@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Модульные дома — производство и монтаж</title>
-<meta name="description" content="Модульные дома, бани и хозблоки с завода. 45 дней производства, монтаж за один день, фиксированная цена в договоре, гарантия 25 лет.">
+<meta name="description" content="Модульные и кастомные дома, бани и хозблоки с завода. 45 дней производства, монтаж за один день, фиксированная цена в договоре, гарантия 25 лет.">
 <meta name="theme-color" content="#07090a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -13,16 +13,29 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600&subset=cyrillic&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600;700&subset=cyrillic&display=swap">
 <style>
 
-:root{--bg:#07090a;--bg2:#0e1113;--tx:#fff;--mut:rgba(255,255,255,.62);--ln:rgba(255,255,255,.14);--ac:#d8c9a8;
---sc:'Great Vibes','Snell Roundhand',cursive;--sn:'Montserrat',system-ui,sans-serif;color-scheme:dark;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{
+  --bg:#07090a;
+  --bg2:#0e1113;
+  --tx:#ffffff;
+  --mut:rgba(255,255,255,.65);
+  --ln:rgba(255,255,255,.14);
+  --ac:#d8c9a8;
+  --ac-glow:rgba(216,201,168,.25);
+  --sc:'Great Vibes','Snell Roundhand',cursive;
+  --sn:'Montserrat',system-ui,sans-serif;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px)
+}
 html{scroll-behavior:smooth;scroll-padding-top:90px;background:var(--bg)}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--sn);font-weight:400;line-height:1.55;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
+
 /* HERO */
 .hero{position:relative;min-height:100vh;min-height:100svh;background:#000;overflow:hidden}
 .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
@@ -39,25 +52,30 @@ a{color:inherit;text-decoration:none}
 .h1w{position:absolute;z-index:4;left:2vw;right:2vw;bottom:2.4vw}
 .h1{font-family:var(--sc);font-weight:400;font-size:clamp(76px,10.6vw,300px);line-height:.95;margin:0;letter-spacing:-.01em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
 .sub{font-weight:500;font-size:clamp(18px,2vw,52px);margin:-.5vw 0 0 27.8vw;letter-spacing:-.01em;line-height:1.1}
+
 /* SECTIONS */
 .wrap{max-width:1500px;margin:0 auto}
 .sc{font-family:var(--sc);font-weight:400;line-height:.98;margin:0}
 em{font-style:normal;color:var(--ac)}
 .intro{padding:clamp(80px,11vw,190px) 4vw clamp(70px,9vw,150px);position:relative}
-.intro .t{font-family:var(--sn);font-weight:300;font-size:clamp(30px,4.4vw,76px);line-height:1.12;letter-spacing:-.025em;max-width:17em}.intro .t em{font-family:var(--sc);font-size:1.3em;line-height:.7}
-.intro .row{display:grid;grid-template-columns:5fr 7fr;gap:6vw;margin-top:clamp(48px,6vw,110px);align-items:start}
+.intro .t{font-family:var(--sn);font-weight:300;font-size:clamp(30px,4.4vw,76px);line-height:1.12;letter-spacing:-.025em;max-width:17em}
+.intro .t em{font-family:var(--sc);font-size:1.3em;line-height:.7}
+.intro .row{display:grid;grid-template-columns:5fr 7fr;gap:6vw;margin-top:clamp(48px,6vw,110px);align-items:center}
 .intro p{color:var(--mut);font-weight:300;font-size:clamp(16px,1.3vw,21px);max-width:30em;margin:0 0 28px}
 .facts{font-weight:500;font-size:15px;line-height:1.9}
 .facts span{display:block}
-.ph{position:relative}
-.ph img{display:block;width:100%;height:auto}
-.ph .s{position:absolute;width:44%;left:-18%;bottom:-14%;border:6px solid var(--bg);box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.ph .m{margin-right:-4vw;width:calc(100% + 4vw)}
+
+/* Single architectural image in block 2 */
+.ph{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.1)}
+.ph img{display:block;width:100%;height:auto;object-fit:cover;border-radius:22px;transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.ph:hover img{transform:scale(1.03)}
+
 .break{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:10vh 4vw;overflow:hidden;background:#000}
 .break .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
 .break::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 70%)}
 .break .sc{position:relative;z-index:2;font-size:clamp(44px,7vw,120px);text-shadow:0 4px 40px rgba(0,0,0,.4)}
 .break .sc:nth-child(2){margin-left:18vw}.break .sc:nth-child(3){margin-left:6vw}
+
 .stp{background:#eeeae1;color:#0b0d0e;padding:clamp(80px,10vw,170px) 4vw}
 .stp .wrap{display:grid;grid-template-columns:5fr 7fr;gap:5vw}
 .stp .hd{position:sticky;top:8vh;align-self:start}
@@ -69,6 +87,7 @@ em{font-style:normal;color:var(--ac)}
 .stp li .sc{font-size:clamp(56px,6vw,96px);color:#8a7650}
 .stp h3{font-size:clamp(20px,1.9vw,30px);font-weight:600;margin:.5em 0 .4em;letter-spacing:-.01em}
 .stp li p{margin:0;font-weight:300;max-width:26em;opacity:.75}
+
 .rvw{position:relative;padding:clamp(90px,12vw,200px) 4vw;overflow:hidden}
 .rvw .bgi{position:absolute;right:0;top:0;bottom:0;width:42%;object-fit:cover;opacity:.2;-webkit-mask-image:linear-gradient(270deg,#000 30%,transparent);mask-image:linear-gradient(270deg,#000 30%,transparent)}
 .rvw .wrap{position:relative}
@@ -83,71 +102,149 @@ em{font-style:normal;color:var(--ac)}
 .dots{display:flex;gap:10px;margin-top:44px}
 .dots button{all:unset;cursor:pointer;width:44px;height:3px;background:var(--ln);transition:background .3s;padding:10px 0;background-clip:content-box}
 .dots button.on{background:var(--ac);background-clip:content-box}
-.cnt{padding:clamp(70px,9vw,150px) 4vw clamp(50px,6vw,90px)}
+
 .cats{padding:clamp(40px,6vw,100px) 4vw clamp(80px,10vw,160px)}
 .cats h2{font-size:clamp(44px,5vw,84px);margin:0 0 clamp(24px,3vw,48px)}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.5vw,24px)}
 .tile{position:relative;display:block;aspect-ratio:2/1;border-radius:16px;overflow:hidden;background:#111}
-.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1)}
 .tile:hover img{transform:scale(1.05)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),transparent 55%);pointer-events:none}
-.tile .btn{position:absolute;z-index:2;top:clamp(12px,1.6vw,24px);right:clamp(12px,1.6vw,24px);border:1px solid rgba(255,255,255,.7);border-radius:12px;padding:12px 20px;font-size:clamp(13px,1vw,16px);font-weight:500;backdrop-filter:blur(6px);background:rgba(0,0,0,.2);transition:background .3s,color .3s}
-.tile:hover .btn{background:#fff;color:#000}
+.tile .btn{position:absolute;z-index:2;top:clamp(12px,1.6vw,24px);right:clamp(12px,1.6vw,24px);border:1px solid rgba(255,255,255,.7);border-radius:12px;padding:12px 20px;font-size:clamp(13px,1vw,16px);font-weight:500;backdrop-filter:blur(6px);background:rgba(0,0,0,.2);transition:background .3s,color .3s,border-color .3s}
+.tile:hover .btn{background:#fff;color:#000;border-color:#fff}
 .tile .tt{position:absolute;z-index:2;left:clamp(16px,2vw,32px);bottom:clamp(14px,1.8vw,28px)}
 .tile h3{font-size:clamp(36px,3.6vw,60px)}
 .tile p{margin:.2em 0 0;font-weight:500;font-size:clamp(15px,1.4vw,22px)}
+
 .rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
 .rv.in{opacity:1;transform:none}
-.mad input,.mad select{display:inline-block;width:auto;min-width:7em;max-width:100%;background:transparent;border:0;border-bottom:1px solid var(--tx);color:var(--ac);font:inherit;padding:0 .15em;outline:0;border-radius:0;transition:border-color .2s}
-.mad input:focus,.mad select:focus{border-bottom-color:var(--ac)}
-.mad input::placeholder{color:rgba(216,201,168,.4)}
-.mad select option{background:#111;color:#fff;font-size:16px}
 
-/* CONTACTS */
-.cnt{padding:clamp(70px,9vw,150px) 4vw clamp(50px,6vw,90px);border-top:1px solid var(--ln)}
-.cnt h2{font-size:clamp(56px,6.5vw,110px);margin-bottom:.1em}
-.cnt .lead{color:var(--mut);font-weight:300;font-size:clamp(16px,1.3vw,21px);margin:0 0 clamp(20px,3vw,40px);max-width:32em}
-.ph1{display:inline-block;font-weight:200;font-size:clamp(34px,7vw,120px);letter-spacing:-.045em;line-height:1;margin-bottom:clamp(40px,6vw,100px);transition:color .3s;white-space:nowrap}
-.ph1:hover,.ph1:focus-visible{color:var(--ac)}
-.cnt .wrap2{display:grid;grid-template-columns:7fr 4fr;gap:6vw;align-items:start}
-.mad{font-weight:300;font-size:clamp(22px,2.7vw,44px);line-height:1.9;letter-spacing:-.015em;margin:0}
-.go{margin-top:28px;display:inline-flex;align-items:center;gap:18px;font-family:var(--sc);font-size:clamp(40px,4vw,64px);background:none;border:0;color:var(--tx);cursor:pointer;padding:0;transition:color .3s,gap .3s}
-.go:hover:not(:disabled),.go:focus-visible{color:var(--ac);gap:28px}
-.go:disabled{opacity:.5;cursor:wait}
-.mad input.bad{border-bottom-color:#e5736f}
+/* UPGRADED CONTACTS & INTERACTIVE CONFIGURATOR */
+.cnt{position:relative;padding:clamp(80px,10vw,160px) 4vw clamp(60px,7vw,110px);border-top:1px solid var(--ln);background:radial-gradient(circle 800px at 90% 10%,rgba(216,201,168,.05),transparent)}
+.cnt-head{max-width:920px;margin-bottom:clamp(36px,5vw,60px)}
+.cnt-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;background:rgba(216,201,168,.1);border:1px solid rgba(216,201,168,.25);color:var(--ac);font-size:13px;font-weight:500;letter-spacing:.04em;margin-bottom:18px}
+.cnt-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ac);box-shadow:0 0 10px var(--ac)}
+.cnt-head h2{font-size:clamp(52px,6.5vw,104px);margin:0 0 14px;line-height:1}
+.cnt-lead{color:var(--mut);font-weight:300;font-size:clamp(16px,1.35vw,22px);line-height:1.6;margin:0;max-width:38em}
+
+.cnt-grid{display:grid;grid-template-columns:1.22fr .92fr;gap:clamp(32px,4vw,64px);align-items:start}
+
+/* Form Card */
+.form-card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.045) 0%,rgba(255,255,255,.015) 100%);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:clamp(24px,3.4vw,44px);backdrop-filter:blur(16px);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.form-step{margin-bottom:28px}
+.step-title{display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:500;color:var(--tx);margin-bottom:12px;letter-spacing:.01em}
+.step-title span{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ac)}
+
+/* Project Selection Chips (Includes Custom Houses) */
+.chip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.chip{appearance:none;position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:14px;color:var(--tx);text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:border-color .2s,background .2s,transform .2s,box-shadow .2s;font-family:inherit}
+.chip:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.25);transform:translateY(-1px)}
+.chip.active{background:rgba(216,201,168,.12);border-color:var(--ac);box-shadow:0 0 24px rgba(216,201,168,.18)}
+.chip.featured{background:linear-gradient(135deg,rgba(216,201,168,.14) 0%,rgba(255,255,255,.04) 100%);border-color:rgba(216,201,168,.35)}
+.chip.featured.active{border-color:var(--ac);box-shadow:0 0 28px rgba(216,201,168,.25)}
+.chip-tag{position:absolute;top:10px;right:10px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:100px;background:var(--ac);color:#07090a}
+.chip-name{font-weight:500;font-size:14.5px;display:flex;align-items:center;gap:6px}
+.chip-desc{color:var(--mut);font-size:12px;font-weight:300}
+
+/* Area Pills */
+.area-pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{appearance:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:9px 18px;color:var(--tx);font-family:inherit;font-size:13px;font-weight:400;cursor:pointer;transition:all .2s ease}
+.pill:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.25)}
+.pill.active{background:var(--ac);border-color:var(--ac);color:#07090a;font-weight:600}
+
+/* Inputs */
+.fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.input-box{position:relative}
+.input-box label{display:block;font-size:12px;color:var(--mut);margin-bottom:6px;font-weight:400}
+.input-box input,.input-box textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 15px;color:var(--tx);font-family:inherit;font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
+.input-box input::placeholder,.input-box textarea::placeholder{color:rgba(255,255,255,.3)}
+.input-box input:focus,.input-box textarea:focus{border-color:var(--ac);box-shadow:0 0 16px rgba(216,201,168,.2);background:rgba(255,255,255,.07)}
+.input-box input.bad,.input-box textarea.bad{border-color:#e5736f}
+.input-box textarea{resize:vertical;min-height:76px;line-height:1.4}
+
 .hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}
-.agree{display:flex;gap:12px;align-items:flex-start;margin-top:26px;font-size:13px;line-height:1.5;font-weight:300;color:var(--mut);max-width:38em;cursor:pointer}
-.agree input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:0;border:1px solid var(--mut);border-radius:5px;background:transparent;display:grid;place-items:center;cursor:pointer;transition:border-color .2s,background .2s}
+.agree{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:12.5px;line-height:1.5;font-weight:300;color:var(--mut);cursor:pointer}
+.agree input{appearance:none;-webkit-appearance:none;flex:none;width:19px;height:19px;margin:1px 0 0;border:1px solid var(--mut);border-radius:5px;background:transparent;display:grid;place-items:center;cursor:pointer;transition:border-color .2s,background .2s}
 .agree input:checked{background:var(--ac);border-color:var(--ac)}
-.agree input:checked::after{content:"";width:5px;height:10px;border:solid #111;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
-.agree input:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
-.agree.bad{color:#e5736f}.agree.bad input{border-color:#e5736f}
+.agree input:checked::after{content:"";width:5px;height:9px;border:solid #07090a;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.agree input:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.agree.bad{color:#e5736f}
+.agree.bad input{border-color:#e5736f}
 .agree a{text-decoration:underline;text-underline-offset:3px}
-.st{min-height:1.6em;margin-top:18px;font-size:15px;font-weight:400}
-.st.ok{color:var(--ac)}.st.err{color:#e5736f}
-.cnt .pic2 img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:16px;background:#111}
-.cinfo{list-style:none;margin:clamp(50px,6vw,100px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ln)}
+
+.btn-submit{width:100%;margin-top:20px;background:var(--ac);color:#07090a;border:none;border-radius:14px;padding:17px 28px;font-family:var(--sn);font-size:16px;font-weight:600;letter-spacing:.01em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:12px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-submit:hover:not(:disabled){background:#e5d8bb;transform:translateY(-2px);box-shadow:0 14px 35px rgba(216,201,168,.3)}
+.btn-submit:disabled{opacity:.6;cursor:wait}
+.btn-submit svg{width:18px;height:18px;transition:transform .25s ease}
+.btn-submit:hover svg{transform:translateX(4px)}
+
+.st{min-height:1.6em;margin-top:16px;font-size:14.5px;font-weight:400;border-radius:10px;padding:0 4px}
+.st.ok{color:var(--ac);background:rgba(216,201,168,.08);padding:10px 14px;border:1px solid rgba(216,201,168,.2)}
+.st.err{color:#e5736f;background:rgba(229,115,111,.08);padding:10px 14px;border:1px solid rgba(229,115,111,.2)}
+
+.guarantee-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px;color:var(--mut)}
+.guarantee-item{display:flex;align-items:center;gap:8px}
+.guarantee-item svg{flex-shrink:0;width:15px;height:15px;stroke:var(--ac)}
+
+/* Right Side: Showcase + Direct Contacts */
+.cnt-side{display:flex;flex-direction:column;gap:20px}
+.showcase-card{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#111;aspect-ratio:16/11;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.showcase-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.showcase-card:hover img{transform:scale(1.03)}
+.showcase-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.85) 100%)}
+.showcase-overlay{position:absolute;z-index:2;left:24px;right:24px;bottom:20px}
+.showcase-badge{display:inline-block;padding:4px 10px;border-radius:8px;background:rgba(216,201,168,.2);backdrop-filter:blur(8px);border:1px solid rgba(216,201,168,.3);color:var(--ac);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.showcase-overlay h3{margin:0 0 4px;font-size:clamp(20px,2vw,24px);font-weight:500;line-height:1.2}
+.showcase-overlay p{margin:0;font-size:13px;color:var(--mut);line-height:1.4}
+
+/* Quick Channels Box */
+.channels-card{background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.015) 100%);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:clamp(20px,2.5vw,28px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.channels-title{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);margin-bottom:14px}
+.channels-list{display:flex;flex-direction:column;gap:10px}
+.chan-btn{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);transition:all .2s ease}
+.chan-btn:hover{background:rgba(255,255,255,.08);border-color:var(--ac);transform:translateX(3px)}
+.chan-left{display:flex;align-items:center;gap:12px}
+.chan-icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.06);flex-shrink:0}
+.chan-btn.tg .chan-icon{background:rgba(42,171,238,.15);color:#2AABEE}
+.chan-btn.wa .chan-icon{background:rgba(37,211,102,.15);color:#25D366}
+.chan-name{font-weight:500;font-size:14.5px;color:#fff}
+.chan-sub{font-size:12px;color:var(--mut);font-weight:300}
+.chan-status{font-size:11px;font-weight:500;padding:3px 9px;border-radius:100px;background:rgba(255,255,255,.07);color:var(--mut)}
+.chan-btn:hover .chan-status{background:rgba(216,201,168,.15);color:var(--ac)}
+
+/* Phone Highlight Box */
+.phone-box{margin-top:14px;padding:18px 20px;border-radius:16px;background:rgba(216,201,168,.06);border:1px solid rgba(216,201,168,.2);display:flex;flex-direction:column;gap:4px}
+.phone-box small{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ac);font-weight:500}
+.phone-box a{font-size:clamp(22px,2.2vw,32px);font-weight:300;letter-spacing:-.02em;color:#fff;transition:color .2s}
+.phone-box a:hover{color:var(--ac)}
+.phone-box span{font-size:12px;color:var(--mut)}
+
+/* Contact Information Grid */
+.cinfo{list-style:none;margin:clamp(50px,6vw,90px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ln)}
 .cinfo li{padding:26px 24px 8px 0}
-.cinfo li[hidden]{display:none}
-.cinfo small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:10px;font-weight:400}
-.cinfo a,.cinfo span{display:block;font-size:clamp(16px,1.35vw,21px);font-weight:300;line-height:1.4;transition:color .2s}
+.cinfo small{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:8px;font-weight:400}
+.cinfo a,.cinfo span{display:block;font-size:clamp(15px,1.25vw,19px);font-weight:300;line-height:1.45;transition:color .2s}
 .cinfo a:hover,.cinfo a:focus-visible{color:var(--ac)}
+
 footer{padding:28px 4vw 40px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--mut);font-size:13px;font-weight:300;border-top:1px solid var(--ln)}
 footer a{text-decoration:underline;text-underline-offset:3px}
 .vid-pause .bg{display:block}
-@media(max-width:900px){
-.hdr nav{display:none}
-.intro .row,.models .wrap,.stp .wrap,.cnt .wrap2{grid-template-columns:1fr}
-.ph .s{left:4%;bottom:-10%}.ph .m{margin-right:0;width:100%}
-.cg{grid-template-columns:1fr}.tile{aspect-ratio:4/3}
-.stp .hd{position:static}.stp li:nth-child(even){margin-left:0}
-.sub{margin-left:2vw}
-.break .sc:nth-child(2){margin-left:8vw}
-.cnt .pic2{display:none}
-.cinfo{grid-template-columns:1fr 1fr}
-.ph1{white-space:normal}
+
+@media(max-width:980px){
+  .hdr nav{display:none}
+  .intro .row,.stp .wrap,.cnt-grid{grid-template-columns:1fr}
+  .cg{grid-template-columns:1fr}.tile{aspect-ratio:4/3}
+  .stp .hd{position:static}.stp li:nth-child(even){margin-left:0}
+  .sub{margin-left:2vw}
+  .break .sc:nth-child(2){margin-left:8vw}
+  .cinfo{grid-template-columns:1fr 1fr}
 }
-@media(max-width:520px){.cinfo{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .chip-grid{grid-template-columns:1fr}
+  .fields-grid{grid-template-columns:1fr}
+  .guarantee-row{grid-template-columns:1fr;gap:8px}
+  .cinfo{grid-template-columns:1fr}
+}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.q.on{animation:none}}
 
 </style>
@@ -167,27 +264,36 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <section class="intro" id="about"><div class="wrap">
 <h2 class="sc t rv">Сорок пять дней на&nbsp;заводе. <em>Один</em>&nbsp;— на&nbsp;участке.</h2>
 <div class="row">
-<div class="rv"><p>Мы делаем модульные дома в тёплом цеху, где не бывает дождя и срывов графика. Затем привозим их целиком — с окнами, отделкой и сантехникой — и ставим на винтовые сваи за один день.</p><div class="facts"><span>Цена фиксируется в договоре</span><span>Гарантия на конструкцию — 25 лет</span><span>Ставим на любом участке: в посёлке, на склоне, у воды, в лесу</span></div></div>
-<div class="ph rv"><img class="m" src="images/i1.jpg" alt="Модульный дом" loading="lazy" decoding="async"><img class="s" src="images/i2.jpg" alt="Терраса" loading="lazy" decoding="async"></div>
+<div class="rv">
+  <p>Мы производим модульные дома в современном отапливаемом цеху, где нет непогоды, пыли и срывов графика. Затем привозим их на участок в максимальной готовности — с чистовой отделкой, окнами, коммуникациями и сантехникой — и монтируем на свайный фундамент за один световой день.</p>
+  <div class="facts">
+    <span>• Фиксированная смета в официальном договоре</span>
+    <span>• 25 лет заводской гарантии на несущие конструкции</span>
+    <span>• Любой рельеф: склон, лес, береговая линия, готовый ландшафт</span>
+  </div>
+</div>
+<div class="ph rv">
+  <img src="images/i1.jpg" alt="Модульный дом в скандинавском стиле" loading="lazy" decoding="async">
+</div>
 </div></div></section>
 
 <section class="cats" id="projects"><div class="wrap"><h2 class="sc rv">Проекты</h2><div class="cg">
-<a class="tile rv" href="#contacts"><img src="images/t1.jpg" alt="" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные дома</h3><p>от 625 000 ₽</p></div></a>
-<a class="tile rv" href="#contacts"><img src="images/t2.jpg" alt="" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные бани</h3><p>от 670 000 ₽</p></div></a>
-<a class="tile rv" href="#contacts"><img src="images/t3.jpg" alt="" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Дом + баня</h3><p>от 2 005 000 ₽</p></div></a>
-<a class="tile rv" href="#contacts"><img src="images/t4.jpg" alt="" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Хозблоки</h3><p>от 235 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Модульные дома"><img src="images/t1.jpg" alt="Модульные дома" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные дома</h3><p>от 625 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Модульные бани"><img src="images/t2.jpg" alt="Модульные бани" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные бани</h3><p>от 670 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Дом + баня"><img src="images/t3.jpg" alt="Дом + баня" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Дом + баня</h3><p>от 2 005 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Хозблоки"><img src="images/t4.jpg" alt="Хозблоки" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Хозблоки</h3><p>от 235 000 ₽</p></div></a>
 </div></div></section>
 
 <section class="break"><video class="bg" id="breakVideo" muted loop playsinline preload="metadata" poster="images/hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="video/hero-1080-60.mp4" type="video/mp4"></video><p class="sc">Без бетона.</p><p class="sc">Без стройки.</p><p class="sc">Без шума.</p></section>
 
 <section class="stp" id="steps"><div class="wrap">
-<div class="hd"><h2 class="sc">Этапы</h2><p>Пять шагов от первого звонка до ключей. На каждом вы знаете, что происходит и когда будет результат.</p></div>
+<div class="hd"><h2 class="sc">Этапы</h2><p>Пять выверенных шагов от первой консультации до вручения ключей. На каждом этапе вы полностью контролируете ход проекта через фото- и видеоотчёты.</p></div>
 <ol>
-<li class="rv"><span class="sc">1</span><div><h3>Заявка и расчёт</h3><p>Обсуждаем участок, планировку и бюджет. Расчёт присылаем за день.</p></div></li>
-<li class="rv"><span class="sc">2</span><div><h3>Договор и проект</h3><p>Фиксируем цену и сроки, выбираем отделку и комплектацию.</p></div></li>
-<li class="rv"><span class="sc">3</span><div><h3>Производство</h3><p>Собираем модули на заводе 4–6 недель и присылаем фотоотчёты.</p></div></li>
-<li class="rv"><span class="sc">4</span><div><h3>Доставка</h3><p>Готовим сваи и привозим дом на спецтехнике.</p></div></li>
-<li class="rv"><span class="sc">5</span><div><h3>Монтаж за день</h3><p>Ставим модули, подключаем системы, передаём ключи.</p></div></li>
+<li class="rv"><span class="sc">1</span><div><h3>Заявка и расчёт</h3><p>Обсуждаем ваш участок, подбираем планировку и материалы. Подробную смету формируем за один рабочий день.</p></div></li>
+<li class="rv"><span class="sc">2</span><div><h3>Договор и проект</h3><p>Фиксируем финальную стоимость и сроки в договоре, согласовываем спецификацию и 3D-модель.</p></div></li>
+<li class="rv"><span class="sc">3</span><div><h3>Заводское производство</h3><p>Собираем модули в теплом цеху за 4–6 недель, обеспечивая строгий заводской контроль качества.</p></div></li>
+<li class="rv"><span class="sc">4</span><div><h3>Доставка на участок</h3><p>Монтируем винтовой или ж/б фундамент и доставляем готовые модули на спецтехнике.</p></div></li>
+<li class="rv"><span class="sc">5</span><div><h3>Монтаж за 1 день</h3><p>Соединяем секции, подключаем все инженерные сети и передаем вам ключи от готового дома.</p></div></li>
 </ol></div></section>
 
 <section class="rvw" id="reviews"><img class="bgi" src="images/r1.jpg" alt="" loading="lazy" decoding="async"><div class="wrap">
@@ -197,86 +303,397 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <div class="dots"><button type="button" aria-label="Отзыв 1" class="on"></button><button type="button" aria-label="Отзыв 2"></button><button type="button" aria-label="Отзыв 3"></button></div>
 </div></section>
 
+<!-- UPGRADED CONTACTS & CONFIGURATOR -->
 <section class="cnt" id="contacts"><div class="wrap">
-<h2 class="sc rv">Контакты</h2>
-<p class="lead rv">Позвоните или оставьте заявку — рассчитаем стоимость под ваш участок и ответим в течение часа в рабочее время.</p>
-<a class="ph1" href="tel:+78005553535">+7 800 555-35-35</a>
-<div class="wrap2">
-<form id="f" novalidate autocomplete="on">
-<p class="mad">Меня зовут <input name="n" placeholder="имя" autocomplete="name" aria-label="Ваше имя" maxlength="60" required>, мой телефон <input name="p" type="tel" placeholder="+7" autocomplete="tel" inputmode="tel" aria-label="Ваш телефон" maxlength="18" required>. Хочу модуль <select name="m" aria-label="Модуль"><option>Альфа</option><option>Бета</option><option>Гамма</option><option>Дельта</option><option>пока не знаю какой</option></select>.</p>
-<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-<label class="agree" id="agreeL"><input type="checkbox" name="c" required><span>Согласен на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a></span></label>
-<button class="go" id="go" type="submit">Отправить <span aria-hidden="true">→</span></button>
-<div class="st" id="st" role="status" aria-live="polite"></div>
-</form>
-<div class="pic2 rv"><img src="images/c1.jpg" alt="" loading="lazy" decoding="async"></div>
-</div>
-<ul class="cinfo">
-<li><small>Телефон</small><a href="tel:+78005553535">8 800 555-35-35</a><span>бесплатно по России</span></li>
-<li><small>Почта</small><a href="mailto:hello@example.com">hello@example.com</a></li>
-<li id="tgItem" hidden><small>Telegram</small><a id="tgLink" href="#" target="_blank" rel="noopener"></a></li>
-<li id="waItem" hidden><small>WhatsApp</small><a id="waLink" href="#" target="_blank" rel="noopener"></a></li>
-<li><small>Завод и шоу-рум</small><span>Московская область</span><span>по записи</span></li>
-<li><small>Режим работы</small><span>Пн–Пт 9:00–19:00</span><span>Сб 10:00–16:00</span></li>
-</ul>
+  <div class="cnt-head rv">
+    <div class="cnt-badge">Свяжитесь с нами</div>
+    <h2 class="sc">Обсудим ваш дом</h2>
+    <p class="cnt-lead">Выберите готовое модульное решение или закажите проектирование кастомного дома по вашим эскизам. Рассчитаем стоимость, подготовим 3D-эскиз и пригласим вас на экскурсию в цех.</p>
+  </div>
+
+  <div class="cnt-grid">
+    <!-- Form Card -->
+    <div class="form-card rv">
+      <form id="f" novalidate autocomplete="on">
+        
+        <!-- Step 1: Select Type including Custom Houses -->
+        <div class="form-step">
+          <div class="step-title">1. Что планируете строить? <span>Выберите категорию</span></div>
+          <div class="chip-grid" id="moduleChips">
+            <button type="button" class="chip featured active" data-val="Кастомный дом (индивидуальный проект)">
+              <span class="chip-tag">По вашему ТЗ</span>
+              <span class="chip-name">✨ Кастомный дом</span>
+              <span class="chip-desc">Индивидуальная архитектура под ключ</span>
+            </button>
+            <button type="button" class="chip" data-val="Модульный дом">
+              <span class="chip-name">🏡 Модульный дом</span>
+              <span class="chip-desc">Серии Альфа, Бета, Гамма, Дельта</span>
+            </button>
+            <button type="button" class="chip" data-val="Модульная баня">
+              <span class="chip-name">♨️ Модульная баня</span>
+              <span class="chip-desc">С парной, комнатой отдыха и террасой</span>
+            </button>
+            <button type="button" class="chip" data-val="Дом + баня">
+              <span class="chip-name">🌿 Комплекс дом + баня</span>
+              <span class="chip-desc">Единый архитектурный ансамбль</span>
+            </button>
+            <button type="button" class="chip" data-val="Хозблок">
+              <span class="chip-name">📦 Стильный хозблок</span>
+              <span class="chip-desc">Мастерская, склад или гостевой блок</span>
+            </button>
+            <button type="button" class="chip" data-val="Консультация / подбор проекта">
+              <span class="chip-name">💬 Нужен совет</span>
+              <span class="chip-desc">Поможем выбрать под ваш бюджет</span>
+            </button>
+          </div>
+          <input type="hidden" name="m" id="selectedModule" value="Кастомный дом (индивидуальный проект)">
+        </div>
+
+        <!-- Step 2: Desired Area -->
+        <div class="form-step">
+          <div class="step-title">2. Ориентировочная площадь <span>м²</span></div>
+          <div class="area-pills" id="areaPills">
+            <button type="button" class="pill" data-area="до 40 м²">до 40 м²</button>
+            <button type="button" class="pill active" data-area="40–70 м²">40–70 м²</button>
+            <button type="button" class="pill" data-area="70–110 м²">70–110 м²</button>
+            <button type="button" class="pill" data-area="110+ м²">110+ м²</button>
+            <button type="button" class="pill" data-area="Индивидуально">Индивидуально</button>
+          </div>
+          <input type="hidden" name="area" id="selectedArea" value="40–70 м²">
+        </div>
+
+        <!-- Step 3: Contact Info -->
+        <div class="form-step">
+          <div class="step-title">3. Ваши контактные данные <span>Для расчёта сметы</span></div>
+          <div class="fields-grid">
+            <div class="input-box">
+              <label for="fieldName">Ваше имя *</label>
+              <input id="fieldName" name="n" placeholder="Как к вам обращаться" autocomplete="name" required maxlength="60">
+            </div>
+            <div class="input-box">
+              <label for="fieldPhone">Номер телефона *</label>
+              <input id="fieldPhone" name="p" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel" required maxlength="18">
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="fieldComment">Пожелания или ссылка на проект (необязательно)</label>
+            <textarea id="fieldComment" name="comment" placeholder="Например: участок в лесу со склоном, панорамные окна в гостиной, планируем заселение летом"></textarea>
+          </div>
+        </div>
+
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label class="agree" id="agreeL">
+          <input type="checkbox" name="c" checked required>
+          <span>Согласен на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
+        </label>
+
+        <button class="btn-submit" id="go" type="submit">
+          <span>Получить подробный расчёт и 3D-эскиз</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="st" id="st" role="status" aria-live="polite"></div>
+
+        <div class="guarantee-row">
+          <div class="guarantee-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Расчёт сметы за 24 ч</span>
+          </div>
+          <div class="guarantee-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Цена фиксируется в договоре</span>
+          </div>
+          <div class="guarantee-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <span>Экскурсия в цех перед заказом</span>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Right Side: Production Showcase & Direct Messengers -->
+    <div class="cnt-side rv">
+      <div class="showcase-card">
+        <img src="images/c1.jpg" alt="Производственный цех и готовые модули" loading="lazy" decoding="async">
+        <div class="showcase-overlay">
+          <span class="showcase-badge">Собственный завод в МО</span>
+          <h3>2 500 м² тёплых цехов</h3>
+          <p>Приезжайте посмотреть на сборку домов вживую, протестировать чистовую отделку и пообщаться с инженерами.</p>
+        </div>
+      </div>
+
+      <div class="channels-card">
+        <div class="channels-title">Прямой диалог с архитектором</div>
+        <div class="channels-list">
+          <a class="chan-btn tg" id="tgDirectBtn" href="https://t.me/dobrostroy" target="_blank" rel="noopener">
+            <div class="chan-left">
+              <div class="chan-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.37.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              </div>
+              <div>
+                <div class="chan-name">Чат в Telegram</div>
+                <div class="chan-sub">Отвечаем за 5 минут, присылаем фото</div>
+              </div>
+            </div>
+            <span class="chan-status">Онлайн</span>
+          </a>
+
+          <a class="chan-btn wa" id="waDirectBtn" href="https://wa.me/78005553535" target="_blank" rel="noopener">
+            <div class="chan-left">
+              <div class="chan-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.25.56-.96.9-1.34.93-.38.03-.89.02-1.63-.23-.46-.16-1.04-.41-1.81-.85-3.3-1.89-5.44-5.26-5.61-5.48-.16-.22-1.34-1.78-1.34-3.4 0-1.61.84-2.41 1.14-2.74.3-.32.65-.41.87-.41.22 0 .43.01.62.02.2.01.46-.08.72.54.26.62.89 2.18.97 2.34.08.16.14.35.03.56-.11.22-.16.35-.32.54-.16.19-.34.42-.48.56-.16.16-.33.33-.14.66.19.32.84 1.38 1.8 2.24 1.24 1.1 2.28 1.45 2.61 1.61.32.16.51.14.7-.08.19-.22.81-.95 1.03-1.27.22-.32.43-.27.73-.16l.16.08zM12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.33A10 10 0 1 0 12 2z"/></svg>
+              </div>
+              <div>
+                <div class="chan-name">Чат в WhatsApp</div>
+                <div class="chan-sub">Быстрая консультация и каталоги</div>
+              </div>
+            </div>
+            <span class="chan-status">Чат</span>
+          </a>
+        </div>
+
+        <div class="phone-box">
+          <small>Прямая горячая линия</small>
+          <a href="tel:+78005553535">+7 800 555-35-35</a>
+          <span>Бесплатный звонок по всей России • Ежедневно с 9:00 до 19:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Contact Info -->
+  <ul class="cinfo">
+    <li><small>Отдел продаж</small><a href="tel:+78005553535">8 800 555-35-35</a><span>бесплатно по России</span></li>
+    <li><small>Почта для проектов</small><a href="mailto:hello@example.com">hello@example.com</a><span>ждём ваши чертежи и ТЗ</span></li>
+    <li><small>Производство и шоу-рум</small><span>Московская область</span><span>посещение по предварительной записи</span></li>
+    <li><small>График работы цеха</small><span>Пн–Пт 9:00–19:00</span><span>Сб 10:00–16:00 (экскурсии)</span></li>
+  </ul>
+
 </div></section>
 
-<footer><span>© 2026 Модульные дома</span><span><a href="privacy.html">Политика конфиденциальности</a></span><span>Производство и монтаж модульных домов</span></footer>
+<footer>
+  <span>© 2026 Модульные дома</span>
+  <span><a href="privacy.html">Политика конфиденциальности</a></span>
+  <span>Производство и монтаж модульных и кастомных домов</span>
+</footer>
 
 <script>
-/* Контакты — впишите свои значения. Пустое значение скрывает пункт. */
-var CONFIG={tg:'',wa:'',endpoint:'/api/lead'};
+/* Контакты — впишите свои значения. */
+var CONFIG = {
+  tg: 'dobrostroy',
+  wa: '+7 900 000-00-00',
+  endpoint: '/api/lead'
+};
+
 (function(){
-function $(i){return document.getElementById(i)}
-/* contacts config */
-if(CONFIG.tg){var t=CONFIG.tg.replace(/^@/,'');$('tgLink').href='https://t.me/'+t;$('tgLink').textContent='@'+t;$('tgItem').hidden=false}
-if(CONFIG.wa){var d=CONFIG.wa.replace(/\D/g,'');$('waLink').href='https://wa.me/'+d;$('waLink').textContent=CONFIG.wa;$('waItem').hidden=false}
+  function $(id){ return document.getElementById(id); }
 
-/* video: 4K@120 for big screens, 1080p@60 otherwise; pause offscreen */
-var hv=$('heroVideo'),bv=$('breakVideo');
-var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-var cn=navigator.connection||{};
-var big=Math.max(screen.width,screen.height)*(window.devicePixelRatio||1)>=2560&&!cn.saveData&&!/2g|3g/.test(cn.effectiveType||'');
-if(big&&!rm){hv.querySelector('source').src='video/hero-4k-120.mp4';hv.load()}
-if(rm){hv.removeAttribute('autoplay');hv.pause()}
-else{
-var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.05});
-vo.observe(hv);vo.observe(bv);
-}
+  /* Initialize Direct Social Links */
+  var tgBtn = $('tgDirectBtn'), waBtn = $('waDirectBtn');
+  if (CONFIG.tg) {
+    var tgUser = CONFIG.tg.replace(/^@/,'');
+    if (tgBtn) tgBtn.href = 'https://t.me/' + tgUser;
+  }
+  if (CONFIG.wa) {
+    var waClean = CONFIG.wa.replace(/\D/g,'');
+    if (waBtn) waBtn.href = 'https://wa.me/' + waClean;
+  }
 
-/* reveal */
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
-document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  /* Video playback handling */
+  var hv = $('heroVideo'), bv = $('breakVideo');
+  var rm = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var cn = navigator.connection || {};
+  var big = Math.max(screen.width, screen.height) * (window.devicePixelRatio || 1) >= 2560 && !cn.saveData && !/2g|3g/.test(cn.effectiveType || '');
+  if (big && !rm && hv) {
+    var srcEl = hv.querySelector('source');
+    if (srcEl) { srcEl.src = 'video/hero-4k-120.mp4'; hv.load(); }
+  }
+  if (rm && hv) {
+    hv.removeAttribute('autoplay');
+    hv.pause();
+  } else if (hv && bv) {
+    var vo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if (e.isIntersecting) {
+          var p = v.play();
+          if (p && p.catch) p.catch(function(){});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: .05 });
+    vo.observe(hv);
+    vo.observe(bv);
+  }
 
-/* reviews */
-var qs=document.querySelectorAll('.q'),ds=document.querySelectorAll('.dots button'),cq=0,tm;
-function setQ(i){cq=i;qs.forEach(function(q,k){q.classList.toggle('on',k==i)});ds.forEach(function(d,k){d.classList.toggle('on',k==i)});clearInterval(tm);tm=setInterval(function(){setQ((cq+1)%qs.length)},8000)}
-ds.forEach(function(d,k){d.addEventListener('click',function(){setQ(k)})});setQ(0);
+  /* Reveal animations */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(x){
+      if (x.isIntersecting) {
+        x.target.classList.add('in');
+        io.unobserve(x.target);
+      }
+    });
+  }, { threshold: .1 });
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
 
-/* form */
-var f=$('f'),st=$('st'),go=$('go'),pi=f.p;
-function fmt(v){var d=v.replace(/\D/g,'');if(d[0]==='8')d='7'+d.slice(1);else if(d[0]!=='7')d='7'+d;if(d.length>11&&d[0]==='7'&&(d[1]==='7'||d[1]==='8'))d=d.slice(1);d=d.slice(0,11);
-var o='+7';if(d.length>1)o+=' ('+d.slice(1,4);if(d.length>=5)o+=') '+d.slice(4,7);if(d.length>=8)o+='-'+d.slice(7,9);if(d.length>=10)o+='-'+d.slice(9,11);return o}
-pi.addEventListener('focus',function(){if(!pi.value)pi.value='+7'});
-pi.addEventListener('blur',function(){if(pi.value==='+7')pi.value=''});
-pi.addEventListener('input',function(e){if(e.inputType&&e.inputType.indexOf('delete')===0&&pi.value.replace(/\D/g,'').length<=1){pi.value='';return}pi.value=fmt(pi.value)});
-function say(m,c){st.textContent=m;st.className='st '+(c||'')}
-f.addEventListener('submit',function(ev){
-ev.preventDefault();
-var bad=false;
-f.n.classList.remove('bad');pi.classList.remove('bad');$('agreeL').classList.remove('bad');
-if(f.n.value.trim().length<2){f.n.classList.add('bad');bad=true}
-if(pi.value.replace(/\D/g,'').length!==11){pi.classList.add('bad');bad=true}
-if(!f.c.checked){$('agreeL').classList.add('bad');bad=true}
-if(bad){say('Проверьте имя, телефон и согласие на обработку данных.','err');(f.n.classList.contains('bad')?f.n:pi.classList.contains('bad')?pi:f.c).focus();return}
-if(f.website.value){say('Спасибо! Позвоним в течение часа.','ok');f.reset();return}
-go.disabled=true;say('Отправляем…');
-fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:f.n.value.trim(),phone:pi.value,module:f.m.value,page:location.href})})
-.then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
-.then(function(){say('Спасибо! Позвоним в течение часа в рабочее время.','ok');f.reset()})
-.catch(function(){say('Не удалось отправить заявку. Позвоните нам: +7 800 555-35-35','err')})
-.then(function(){go.disabled=false});
-});
+  /* Reviews slider */
+  var qs = document.querySelectorAll('.q'), ds = document.querySelectorAll('.dots button'), cq = 0, tm;
+  function setQ(i){
+    cq = i;
+    qs.forEach(function(q, k){ q.classList.toggle('on', k === i); });
+    ds.forEach(function(d, k){ d.classList.toggle('on', k === i); });
+    clearInterval(tm);
+    tm = setInterval(function(){ setQ((cq + 1) % qs.length); }, 8000);
+  }
+  ds.forEach(function(d, k){ d.addEventListener('click', function(){ setQ(k); }); });
+  if (qs.length) setQ(0);
+
+  /* Project Tile -> Contact Form Linking */
+  document.querySelectorAll('.tile[data-select]').forEach(function(tile){
+    tile.addEventListener('click', function(e){
+      var targetVal = tile.getAttribute('data-select');
+      selectModule(targetVal);
+    });
+  });
+
+  /* Module Selector Chips */
+  var moduleChips = document.querySelectorAll('#moduleChips .chip');
+  var moduleInput = $('selectedModule');
+  function selectModule(val){
+    var matched = false;
+    moduleChips.forEach(function(btn){
+      var bVal = btn.getAttribute('data-val');
+      if (bVal === val || (val && bVal.toLowerCase().indexOf(val.toLowerCase()) !== -1)) {
+        btn.classList.add('active');
+        moduleInput.value = bVal;
+        matched = true;
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    if (!matched && moduleChips[0]) {
+      moduleChips[0].classList.add('active');
+      moduleInput.value = moduleChips[0].getAttribute('data-val');
+    }
+  }
+  moduleChips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      selectModule(btn.getAttribute('data-val'));
+    });
+  });
+
+  /* Area Selector Pills */
+  var areaPills = document.querySelectorAll('#areaPills .pill');
+  var areaInput = $('selectedArea');
+  areaPills.forEach(function(pill){
+    pill.addEventListener('click', function(){
+      areaPills.forEach(function(p){ p.classList.remove('active'); });
+      pill.classList.add('active');
+      areaInput.value = pill.getAttribute('data-area');
+    });
+  });
+
+  /* Form Submission & Phone Formatting */
+  var f = $('f'), st = $('st'), go = $('go'), pi = $('fieldPhone'), ni = $('fieldName');
+  function fmtPhone(v){
+    var d = v.replace(/\D/g, '');
+    if (d[0] === '8') d = '7' + d.slice(1);
+    else if (d[0] !== '7') d = '7' + d;
+    if (d.length > 11 && d[0] === '7' && (d[1] === '7' || d[1] === '8')) d = d.slice(1);
+    d = d.slice(0, 11);
+    var o = '+7';
+    if (d.length > 1) o += ' (' + d.slice(1, 4);
+    if (d.length >= 5) o += ') ' + d.slice(4, 7);
+    if (d.length >= 8) o += '-' + d.slice(7, 9);
+    if (d.length >= 10) o += '-' + d.slice(9, 11);
+    return o;
+  }
+  pi.addEventListener('focus', function(){ if (!pi.value) pi.value = '+7'; });
+  pi.addEventListener('blur', function(){ if (pi.value === '+7') pi.value = ''; });
+  pi.addEventListener('input', function(e){
+    if (e.inputType && e.inputType.indexOf('delete') === 0 && pi.value.replace(/\D/g, '').length <= 1) {
+      pi.value = '';
+      return;
+    }
+    pi.value = fmtPhone(pi.value);
+  });
+
+  function say(m, c){
+    st.textContent = m;
+    st.className = 'st ' + (c || '');
+  }
+
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var bad = false;
+    ni.classList.remove('bad');
+    pi.classList.remove('bad');
+    $('agreeL').classList.remove('bad');
+
+    if (ni.value.trim().length < 2) {
+      ni.classList.add('bad');
+      bad = true;
+    }
+    if (pi.value.replace(/\D/g, '').length !== 11) {
+      pi.classList.add('bad');
+      bad = true;
+    }
+    if (!f.c.checked) {
+      $('agreeL').classList.add('bad');
+      bad = true;
+    }
+
+    if (bad) {
+      say('Пожалуйста, заполните имя, корректный номер телефона и согласитесь с политикой конфиденциальности.', 'err');
+      (ni.classList.contains('bad') ? ni : pi.classList.contains('bad') ? pi : f.c).focus();
+      return;
+    }
+
+    if (f.website && f.website.value) {
+      say('Заявка принята! Скоро свяжемся с вами.', 'ok');
+      f.reset();
+      return;
+    }
+
+    go.disabled = true;
+    say('Отправляем данные архитектору…');
+
+    var payload = {
+      name: ni.value.trim(),
+      phone: pi.value,
+      module: moduleInput.value,
+      area: areaInput.value,
+      comment: (f.comment ? f.comment.value.trim() : ''),
+      page: location.href
+    };
+
+    fetch(CONFIG.endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(function(r){
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    })
+    .then(function(){
+      say('✓ Заявка успешно отправлена! Главный архитектор подготовит предварительный расчёт и свяжется с вами в течение часа.', 'ok');
+      f.reset();
+      selectModule('Кастомный дом (индивидуальный проект)');
+      if (areaPills[1]) areaPills[1].click();
+    })
+    .catch(function(){
+      say('Не удалось отправить заявку через форму. Пожалуйста, напишите нам в Telegram или позвоните: +7 800 555-35-35', 'err');
+    })
+    .then(function(){
+      go.disabled = false;
+    });
+  });
+
 })();
 </script>
 </body>
