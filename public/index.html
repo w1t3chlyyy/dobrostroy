@@ -11,6 +11,9 @@
 <meta property="og:title" content="Модульные дома — производство и монтаж">
 <meta property="og:description" content="Модули с завода. Монтаж за день. Цена фиксируется в договоре.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600;700&subset=cyrillic&display=swap">
@@ -41,7 +44,9 @@ a{color:inherit;text-decoration:none}
 .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
 .hero::after{pointer-events:none;content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,transparent 35%,rgba(0,0,0,.55)),linear-gradient(0deg,rgba(0,0,0,.55),transparent 45%)}
 .hdr{position:absolute;z-index:5;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;padding:calc(1.15vw + 8px) 2vw 0}
-.logo svg{width:max(56px,3.8vw);height:auto;display:block}
+.logo{width:max(48px,3.75vw);height:max(48px,3.75vw);border-radius:50%;background:rgba(74,70,66,.72);backdrop-filter:blur(8px);display:grid;place-items:center;transition:background .2s;flex-shrink:0}
+.logo:hover{background:rgba(110,104,98,.8)}
+.logo svg{width:52%;height:52%;display:block}
 .hdr nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:max(32px,4vw)}
 .hdr nav a{font-size:max(17px,1.8vw);font-weight:300;letter-spacing:.01em;opacity:.95;transition:opacity .2s}
 .hdr nav a:hover{opacity:.6}
@@ -51,7 +56,7 @@ a{color:inherit;text-decoration:none}
 .ic svg{width:46%;height:46%}
 .h1w{position:absolute;z-index:4;left:2vw;right:2vw;bottom:2.4vw}
 .h1{font-family:var(--sc);font-weight:400;font-size:clamp(76px,10.6vw,300px);line-height:.95;margin:0;letter-spacing:-.01em;text-shadow:0 2px 30px rgba(0,0,0,.35)}
-.sub{font-weight:500;font-size:clamp(18px,2vw,52px);margin:-.5vw 0 0 27.8vw;letter-spacing:-.01em;line-height:1.1}
+.sub{font-style:italic;font-weight:400;font-size:clamp(18px,2vw,50px);margin:-1.8vw 0 0 26vw;letter-spacing:-.01em;line-height:1.15;opacity:.95}
 
 /* SECTIONS */
 .wrap{max-width:1500px;margin:0 auto}
@@ -70,12 +75,6 @@ em{font-style:normal;color:var(--ac)}
 .ph img{display:block;width:100%;height:auto;object-fit:cover;border-radius:22px;transition:transform .9s cubic-bezier(.16,1,.3,1)}
 .ph:hover img{transform:scale(1.03)}
 
-.break{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:10vh 4vw;overflow:hidden;background:#000}
-.break .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
-.break::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 70%)}
-.break .sc{position:relative;z-index:2;font-size:clamp(44px,7vw,120px);text-shadow:0 4px 40px rgba(0,0,0,.4)}
-.break .sc:nth-child(2){margin-left:18vw}.break .sc:nth-child(3){margin-left:6vw}
-
 .stp{background:#eeeae1;color:#0b0d0e;padding:clamp(80px,10vw,170px) 4vw}
 .stp .wrap{display:grid;grid-template-columns:5fr 7fr;gap:5vw}
 .stp .hd{position:sticky;top:8vh;align-self:start}
@@ -89,7 +88,7 @@ em{font-style:normal;color:var(--ac)}
 .stp li p{margin:0;font-weight:300;max-width:26em;opacity:.75}
 
 .rvw{position:relative;padding:clamp(90px,12vw,200px) 4vw;overflow:hidden}
-.rvw .bgi{position:absolute;right:0;top:0;bottom:0;width:42%;object-fit:cover;opacity:.2;-webkit-mask-image:linear-gradient(270deg,#000 30%,transparent);mask-image:linear-gradient(270deg,#000 30%,transparent)}
+.rvw .bgi{position:absolute;right:0;top:0;bottom:0;width:54%;height:100%;object-fit:cover;object-position:right bottom;opacity:.32;-webkit-mask-image:linear-gradient(270deg,#000 40%,transparent);mask-image:linear-gradient(270deg,#000 40%,transparent);pointer-events:none}
 .rvw .wrap{position:relative}
 .q{display:none;max-width:min(100%,1300px)}
 .q.on{display:block;animation:fi .9s}
@@ -143,7 +142,9 @@ em{font-style:normal;color:var(--ac)}
 .chip.featured{background:linear-gradient(135deg,rgba(216,201,168,.14) 0%,rgba(255,255,255,.04) 100%);border-color:rgba(216,201,168,.35)}
 .chip.featured.active{border-color:var(--ac);box-shadow:0 0 28px rgba(216,201,168,.25)}
 .chip-tag{position:absolute;top:10px;right:10px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:100px;background:var(--ac);color:#07090a}
-.chip-name{font-weight:500;font-size:14.5px;display:flex;align-items:center;gap:6px}
+.chip-name{font-weight:500;font-size:14.5px;display:flex;align-items:center;gap:8px}
+.chip-ic{width:18px;height:18px;flex-shrink:0;stroke:var(--ac);transition:stroke .2s}
+.chip.active .chip-ic{stroke:#fff}
 .chip-desc{color:var(--mut);font-size:12px;font-weight:300}
 
 /* Area Pills */
@@ -236,8 +237,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   .cg{grid-template-columns:1fr}.tile{aspect-ratio:4/3}
   .stp .hd{position:static}.stp li:nth-child(even){margin-left:0}
   .sub{margin-left:2vw}
-  .break .sc:nth-child(2){margin-left:8vw}
   .cinfo{grid-template-columns:1fr 1fr}
+  .rvw .bgi{width:100%;height:100%;opacity:.2}
 }
 @media(max-width:640px){
   .chip-grid{grid-template-columns:1fr}
@@ -252,7 +253,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <body>
 
 <header class="hero" id="top">
-<video class="bg" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="video/hero-1080-60.mp4" type="video/mp4"></video>
+<video class="bg" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="video/hero-1080-60.mp4?v=3" type="video/mp4"></video>
 <div class="hdr">
 <a class="logo" href="#top" aria-label="На главную"><svg viewBox="0 0 73 73"><path d="M0 0H36C56 0 73 16 73 36.5S56 73 36 73H0Z" fill="#fff"/><g stroke="#111" stroke-width="7" stroke-linecap="round"><path d="M28 21V52"/><path d="M15 29L41 44"/><path d="M41 29L15 44"/></g></svg></a>
 <nav><a href="#projects">Проекты</a><a href="#reviews">Отзывы</a><a href="#steps">Этапы</a><a href="#contacts">Контакты</a></nav>
@@ -273,18 +274,16 @@ footer a{text-decoration:underline;text-underline-offset:3px}
   </div>
 </div>
 <div class="ph rv">
-  <img src="images/i1.jpg" alt="Модульный дом в скандинавском стиле" loading="lazy" decoding="async">
+  <img src="images/i1.jpg?v=2" alt="Модульный дом в скандинавском стиле" loading="lazy" decoding="async">
 </div>
 </div></div></section>
 
 <section class="cats" id="projects"><div class="wrap"><h2 class="sc rv">Проекты</h2><div class="cg">
-<a class="tile rv" href="#contacts" data-select="Модульные дома"><img src="images/t1.jpg" alt="Модульные дома" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные дома</h3><p>от 625 000 ₽</p></div></a>
-<a class="tile rv" href="#contacts" data-select="Модульные бани"><img src="images/t2.jpg" alt="Модульные бани" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные бани</h3><p>от 670 000 ₽</p></div></a>
-<a class="tile rv" href="#contacts" data-select="Дом + баня"><img src="images/t3.jpg" alt="Дом + баня" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Дом + баня</h3><p>от 2 005 000 ₽</p></div></a>
-<a class="tile rv" href="#contacts" data-select="Хозблоки"><img src="images/t4.jpg" alt="Хозблоки" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Хозблоки</h3><p>от 235 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Модульные дома"><img src="images/t1.jpg?v=2" alt="Модульные дома" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные дома</h3><p>от 625 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Модульные бани"><img src="images/t2.jpg?v=2" alt="Модульные бани" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Модульные бани</h3><p>от 670 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Дом + баня"><img src="images/t3.jpg?v=2" alt="Дом + баня" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Дом + баня</h3><p>от 2 005 000 ₽</p></div></a>
+<a class="tile rv" href="#contacts" data-select="Хозблоки"><img src="images/t4.jpg?v=2" alt="Хозблоки" loading="lazy" decoding="async"><span class="btn">Перейти в раздел →</span><div class="tt"><h3 class="sc">Хозблоки</h3><p>от 235 000 ₽</p></div></a>
 </div></div></section>
-
-<section class="break"><video class="bg" id="breakVideo" muted loop playsinline preload="metadata" poster="images/hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="video/hero-1080-60.mp4" type="video/mp4"></video><p class="sc">Без бетона.</p><p class="sc">Без стройки.</p><p class="sc">Без шума.</p></section>
 
 <section class="stp" id="steps"><div class="wrap">
 <div class="hd"><h2 class="sc">Этапы</h2><p>Пять выверенных шагов от первой консультации до вручения ключей. На каждом этапе вы полностью контролируете ход проекта через фото- и видеоотчёты.</p></div>
@@ -296,7 +295,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 <li class="rv"><span class="sc">5</span><div><h3>Монтаж за 1 день</h3><p>Соединяем секции, подключаем все инженерные сети и передаем вам ключи от готового дома.</p></div></li>
 </ol></div></section>
 
-<section class="rvw" id="reviews"><img class="bgi" src="images/r1.jpg" alt="" loading="lazy" decoding="async"><div class="wrap">
+<section class="rvw" id="reviews"><img class="bgi" src="images/r1.jpg?v=2" alt="" loading="lazy" decoding="async"><div class="wrap">
 <div class="q on"><blockquote>Утром привезли, вечером мы уже пили чай на террасе. Не верилось, что так бывает</blockquote><cite>Анна и Игорь<span>Модуль «Бета», Карелия</span></cite></div>
 <div class="q"><blockquote>Боялся, что будет хуже обычной стройки. Получилось лучше: тепло, тихо, всё по смете</blockquote><cite>Дмитрий<span>Модуль «Гамма», Подмосковье</span></cite></div>
 <div class="q"><blockquote>Поставили на склоне, где обычный дом не построить. Сваи, модули — и готово за выходные</blockquote><cite>Елена<span>Модуль «Альфа», Алтай</span></cite></div>
@@ -322,27 +321,45 @@ footer a{text-decoration:underline;text-underline-offset:3px}
           <div class="chip-grid" id="moduleChips">
             <button type="button" class="chip featured active" data-val="Кастомный дом (индивидуальный проект)">
               <span class="chip-tag">По вашему ТЗ</span>
-              <span class="chip-name">✨ Кастомный дом</span>
+              <span class="chip-name">
+                <svg class="chip-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m3 21 7.5-14.5M21 21l-7.5-14.5M7 16h10"/></svg>
+                <span>Кастомный дом</span>
+              </span>
               <span class="chip-desc">Индивидуальная архитектура под ключ</span>
             </button>
             <button type="button" class="chip" data-val="Модульный дом">
-              <span class="chip-name">🏡 Модульный дом</span>
+              <span class="chip-name">
+                <svg class="chip-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9.5z"/></svg>
+                <span>Модульный дом</span>
+              </span>
               <span class="chip-desc">Серии Альфа, Бета, Гамма, Дельта</span>
             </button>
             <button type="button" class="chip" data-val="Модульная баня">
-              <span class="chip-name">♨️ Модульная баня</span>
+              <span class="chip-name">
+                <svg class="chip-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                <span>Модульная баня</span>
+              </span>
               <span class="chip-desc">С парной, комнатой отдыха и террасой</span>
             </button>
             <button type="button" class="chip" data-val="Дом + баня">
-              <span class="chip-name">🌿 Комплекс дом + баня</span>
+              <span class="chip-name">
+                <svg class="chip-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 8 7l5 4v9H3v-9z"/><path d="M13 13l4-3 4 3v7h-8v-7z"/><path d="M8 20v-5h3v5"/></svg>
+                <span>Комплекс дом + баня</span>
+              </span>
               <span class="chip-desc">Единый архитектурный ансамбль</span>
             </button>
             <button type="button" class="chip" data-val="Хозблок">
-              <span class="chip-name">📦 Стильный хозблок</span>
+              <span class="chip-name">
+                <svg class="chip-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+                <span>Стильный хозблок</span>
+              </span>
               <span class="chip-desc">Мастерская, склад или гостевой блок</span>
             </button>
             <button type="button" class="chip" data-val="Консультация / подбор проекта">
-              <span class="chip-name">💬 Нужен совет</span>
+              <span class="chip-name">
+                <svg class="chip-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Нужен совет</span>
+              </span>
               <span class="chip-desc">Поможем выбрать под ваш бюджет</span>
             </button>
           </div>
@@ -416,7 +433,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
     <!-- Right Side: Production Showcase & Direct Messengers -->
     <div class="cnt-side rv">
       <div class="showcase-card">
-        <img src="images/c1.jpg" alt="Производственный цех и готовые модули" loading="lazy" decoding="async">
+        <img src="images/c1.jpg?v=2" alt="Производственный цех и готовые модули" loading="lazy" decoding="async">
         <div class="showcase-overlay">
           <span class="showcase-badge">Собственный завод в МО</span>
           <h3>2 500 м² тёплых цехов</h3>
@@ -502,31 +519,30 @@ var CONFIG = {
   }
 
   /* Video playback handling */
-  var hv = $('heroVideo'), bv = $('breakVideo');
+  var hv = $('heroVideo');
   var rm = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var cn = navigator.connection || {};
-  var big = Math.max(screen.width, screen.height) * (window.devicePixelRatio || 1) >= 2560 && !cn.saveData && !/2g|3g/.test(cn.effectiveType || '');
-  if (big && !rm && hv) {
-    var srcEl = hv.querySelector('source');
-    if (srcEl) { srcEl.src = 'video/hero-4k-120.mp4'; hv.load(); }
+  if (hv) {
+    hv.playbackRate = 0.9;
+    hv.addEventListener('loadedmetadata', function(){ hv.playbackRate = 0.9; });
+    hv.addEventListener('play', function(){ hv.playbackRate = 0.9; });
   }
   if (rm && hv) {
     hv.removeAttribute('autoplay');
     hv.pause();
-  } else if (hv && bv) {
+  } else if (hv) {
     var vo = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         var v = e.target;
         if (e.isIntersecting) {
           var p = v.play();
           if (p && p.catch) p.catch(function(){});
+          v.playbackRate = 0.9;
         } else {
           v.pause();
         }
       });
     }, { threshold: .05 });
     vo.observe(hv);
-    vo.observe(bv);
   }
 
   /* Reveal animations */

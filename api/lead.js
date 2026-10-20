@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
   }
 
   const text =
-    `🏠 <b>Новая заявка</b>\n` +
+    `<b>Новая заявка</b>\n` +
     `Имя: ${esc(name)}\n` +
     `Телефон: ${esc(phone)}\n` +
     `Проект / модуль: ${esc(module_)}\n` +
